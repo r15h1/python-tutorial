@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -F anything
+    image: python:tutorial
+    ports:
+      - 5678:5678
+    volumes:
+      - .:/python-tutorial
+    stdin_open: true
+    tty: true
