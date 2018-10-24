@@ -22,5 +22,17 @@ print(my_opened_file.readlines())
 for line in my_opened_file.readlines():
     print(line)
 
+
+# Read one line at a time
+print("My one line: " + my_opened_file.readline())
+
+#reset pointer to beginning of file
+my_opened_file.seek(0)
+
+# Iterate through each line of a file
+for line in my_opened_file:
+    newHighScorer = line.replace("BBB", "PDJ")
+    print(newHighScorer)
+
 #close the opened file
 my_opened_file.close()
